@@ -8,7 +8,6 @@ class Ability
       can :manage, :all
     else
       can :read, User
-      end
     end
   end
 end
