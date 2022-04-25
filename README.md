@@ -14,7 +14,7 @@ You will create a Ruby on Rails application that allows the user to:
 - see the money spent on each category.
 
 <p align="center">
-  <img src="./images/transactions_list.png" alt="Transactions list page" />
+  <img src="../Budget/app/assets/images/transactions_list.png" />
 </p>
 
 ## Project requirements
