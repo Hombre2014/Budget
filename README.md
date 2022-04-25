@@ -21,6 +21,16 @@ You will create a Ruby on Rails application that allows the user to:
 
 The project requirements can be viewed [here](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/rails_capstone.md)
 
+## Design
+
+#### Design
+- You should follow these [design guidelines](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), including:
+  - Colors.
+  - Typography: font face, size and weight.
+  - Layout: composition and space between elements.
+
+> NOTE: In these design guidelines there are several UIs that you won't need for this exercise; also, some pages are not given a design and you will create them following the design guidelines of the other pages.
+
 ## Built With
 
 - Languages: Ruby
@@ -58,6 +68,11 @@ Feel free to check the [issues page](https://github.com/Hombre2014/Budget/issues
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+The original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) under [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/). [License](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
 
 ## 📝 License
 
