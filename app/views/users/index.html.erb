@@ -1,0 +1,9 @@
+<h1>Splash</h1>
+<div class="btn-container">
+  <% if current_user.nil? %>
+    <a class="sign-in-btn" href="/users/sign_in">LOG IN</a>
+    <a class="sign-up-btn" href="/users/sign_up">SIGN UP</a>
+  <% else %>
+    <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
+  <% end %>
+</div>
