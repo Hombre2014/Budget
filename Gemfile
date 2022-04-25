@@ -36,6 +36,9 @@ gem 'rdoc', '~> 4.2', '>= 4.2.2'
 # Add rdoc-data
 gem 'rdoc-data', '~> 4.1'
 
+# Add devise for authentication
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
