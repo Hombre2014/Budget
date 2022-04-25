@@ -30,6 +30,12 @@ gem 'jbuilder'
 # Add rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Add rdoc
+gem 'rdoc', '~> 4.2', '>= 4.2.2'
+
+# Add rdoc-data
+gem 'rdoc-data', '~> 4.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

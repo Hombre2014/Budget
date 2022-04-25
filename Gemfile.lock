@@ -156,6 +156,9 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    rdoc (4.3.0)
+    rdoc-data (4.1.0)
+      rdoc (~> 4.0)
     regexp_parser (2.3.1)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -211,6 +214,8 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
+  rdoc (~> 4.2, >= 4.2.2)
+  rdoc-data (~> 4.1)
   rubocop (>= 1.0, < 2.0)
   sprockets-rails
   stimulus-rails
