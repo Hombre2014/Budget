@@ -1,8 +1,8 @@
 <div class="container-splash">
   <h1 class="header">Budget Tracker</h1>
-  <di class="splash"v>
+  <div class="splash">
     <%= image_tag "splash.gif", { class: 'logo' } %>
-  </di>
+  </div>
   <% if current_user.nil? %>
     <div class="links">
       <%= link_to 'LOG IN', new_user_session_path, { class: 'btn-login'} %>

@@ -48,3 +48,57 @@ body {
   text-align: center;
   color: #afb0b4;
 }
+
+.header-block {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding:1rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 2.8rem;
+  padding-left: 1rem;
+}
+
+.field {
+  border-bottom: 1px solid #ccc;
+}
+
+.actions {
+  text-decoration: none;
+  color: #fff;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.btn-submit {
+  padding: 0.4rem 1.2rem;
+  background-color: #5fb523;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.check-box {
+  margin: 1rem;
+  border: none;
+}
+
+.shared-links {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: #3778c2;
+}
