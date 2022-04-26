@@ -104,3 +104,27 @@ body {
   cursor: pointer;
   color: #3778c2;
 }
+
+.categories-list {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  row-gap: 0.5rem;
+}
+
+.cat-card {
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.cat-details {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+  padding-left: 0.5rem;
+}

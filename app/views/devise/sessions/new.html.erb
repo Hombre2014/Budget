@@ -8,11 +8,11 @@
   <div class="signup-body">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input-field' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", required: true, class: 'input-field' %>
       </div>
 
       <div class="field">
-        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: 'input-field' %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", required: true, class: 'input-field' %>
       </div>
 
       <% if devise_mapping.rememberable? %>

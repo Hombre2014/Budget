@@ -11,7 +11,12 @@
           </div>
           <div class="cat-field">
             <%= form.label :icon, { class: "form-label" } %><br>
-            <%= form.text_field :icon, placeholder: 'Icon', required: true %>
+            <%= form.select :icon, [['Housing', 'Housing.png'], ['Transportation', 'Transportation.png'], ['Food', 'Food.png'],
+                                    ['Utilities', 'Utilities.png'], ['Clothing', 'Clothing.png'], ['Medical', 'Medical.png'],
+                                    ['Insurance', 'Insurance.png'], ['Supplies', 'Supplies.png'], ['Personal', 'Personal.png'],
+                                    ['Education', 'Education.png'], ['Entertainment', 'Entertainment.png'], ['Business', 'Business.png'],
+                                    ['Repairs', 'Repairs.png']
+                                    ], required: true %>
           </div>
           <div class="text-center">
             <%= form.submit class:"btn btn-success create" %>

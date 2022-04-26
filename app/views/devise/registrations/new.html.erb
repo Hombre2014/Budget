@@ -10,21 +10,21 @@
 
     <div class="sign-up-body">
       <div class="field">
-        <%= f.text_field :name, placeholder: "Full name", class: 'input-field' %>
+        <%= f.text_field :name, autofocus: true, placeholder: "Full name", required: true, class: 'input-field' %>
       </div>
 
       <div class="field">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input-field' %>
+        <%= f.email_field :email, autocomplete: "email", placeholder: "Email", required: true, class: 'input-field' %>
       </div>
 
       <div class="field">
         <% if @minimum_password_length %>
         <% end %>
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: 'input-field' %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", required: true, class: 'input-field' %>
       </div>
 
       <div class="field">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", class: 'input-field' %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", required: true, class: 'input-field' %>
       </div>
     
 

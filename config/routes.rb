@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # post "/users//categories/new" => 'categories#create'
   devise_scope :user do 
     get '/users/sign_out' => 'devise/sessions#destroy' 
   end

@@ -1,8 +1,6 @@
 class CategoriesController < ApplicationController
   def index
     @categories = current_user.categories
-    # @user = User.find(params[:user_id])
-    # @categories = @user.categories.includes(:spendings)
   end
 
   def show
@@ -10,9 +8,23 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    # @category = Category.new
     @user = current_user
     @category = @user.categories.new
+    @category_icons = [
+      ['Housing', ActionController::Base.helpers.image_path('Housing.png')],
+      ['Transportation', ActionController::Base.helpers.image_path('Transportation.png')],
+      ['Food', ActionController::Base.helpers.image_path('Food.png')],
+      ['Utilities', ActionController::Base.helpers.image_path('Utilities.png')],
+      ['Clothing', ActionController::Base.helpers.image_path('Clothing.png')],
+      ['Medical', ActionController::Base.helpers.image_path('Medical.png')],
+      ['Insurance', ActionController::Base.helpers.image_path('Insurance.png')],
+      ['Supplies', ActionController::Base.helpers.image_path('Supplies.png')],
+      ['Personal', ActionController::Base.helpers.image_path('Personal.png')],
+      ['Education', ActionController::Base.helpers.image_path('Education.png')],
+      ['Entertainment', ActionController::Base.helpers.image_path('Entertainment.png')],
+      ['Business', ActionController::Base.helpers.image_path('Business.png')],
+      ['Repairs', ActionController::Base.helpers.image_path('Repairs.png')]
+    ]
   end
 
   def create
