@@ -1,0 +1,23 @@
+<div class="container-categories">
+  <h2>Add new category</h2>
+  <div class="">
+    <%= form_with model: @category, url: "/users/#{current_user.id}/categories", method: :post do |form| %>
+      <div class="card">
+        <div class="card-body">
+          <%= form.hidden_field :user_id, value: current_user.id %>
+          <div class="cat-field">
+            <%= form.label :name, { class: "form-label" } %><br>
+            <%= form.text_field :name, placeholder: 'Category name', required: true %>
+          </div>
+          <div class="cat-field">
+            <%= form.label :icon, { class: "form-label" } %><br>
+            <%= form.text_field :icon, placeholder: 'Icon', required: true %>
+          </div>
+          <div class="text-center">
+            <%= form.submit class:"btn btn-success create" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

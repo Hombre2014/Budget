@@ -1,4 +1,35 @@
-<h1>Categories</h1>
+<div class="container-full">
+  <div class="header-block">
+    <i class="fa-solid fa-bars"></i>
+    <span>Categories</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+</div>
+
+<div class="categories-list">
+  <ul class="list-group list-unstyled">
+    <% @categories.each do |category| %>
+    <li class="border border-1 border-secondary container mt-5 rounded bio">
+      <div class="d-flex p-3">
+        <div>
+          <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "text-decoration-none" do %>
+          <h5 class="me-5"><%= category.name%></h5>
+          <% end %>
+          <div>
+            <%if can? :destroy, category %> <%= button_to "Delete", user_categories_path(category.id),
+            method: :delete, class: "btn btn-outline-danger"%> <% end %>
+          </div>
+        </div>
+        <div>
+          <p class="ml-5"><%= category.icon%></p>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
 <a class="sign-in-btn" href="/users/sign_in">LOG IN</a>
 <a class="sign-up-btn" href="/users/sign_up">SIGN UP</a>
 <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
+<%= link_to 'Add new category', new_user_category_path %>
