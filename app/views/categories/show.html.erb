@@ -1,1 +1,35 @@
-<h2><%= @category.name %> category</h2>
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span>Spendings</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+</div>
+<%= render 'total' %>
+<div class='cat-total'>
+  <%= image_tag("#{@category.icon}") %>
+  <span class="cat-name-total"><%= @category.name %> category total: $<%= @total %>0</span>
+</div>
+<div class="categories-list">
+  <ul class="list-group">
+    <% @spendings.reverse().each do |spending| %>
+      <% if (spending.category_id == @category.id) then %>
+        <li class="spend-card">
+          <div class="spend-details">
+            <div class="name-amount">
+              <span><%= spending.name %>:</span>
+              <span class="amount">$<%= spending.amount %>0</span>
+            </div>
+            <span class="date"><%= spending.created_at.to_s.slice(0,10) %></span>
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div class="cat-div">
+  <div class="actions-inner">
+    <%= link_to 'ADD NEW SPENDING', "/users/#{current_user.id}/categories/#{@category.id}/spendings/new/", class: 'cat-new-btn' %>
+  </div>
+</div>

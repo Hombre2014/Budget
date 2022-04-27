@@ -1,10 +1,15 @@
 class CategoriesController < ApplicationController
   def index
     @categories = current_user.categories
+    @spendings = Spending.all
+    @total = 0
   end
 
   def show
     @category = Category.find(params[:id])
+    @spendings = Spending.all
+    @spending = Spending.find(params[:id])
+    @total = 0
   end
 
   def new

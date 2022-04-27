@@ -122,11 +122,61 @@ body {
   background-color: #fff;
 }
 
+.name-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.date {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.spend-card {
+  list-style-type: none;
+  background-color: #fff;
+
+}
+
+.cat-total {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-name-total {
+  font-weight: 600;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1rem;
+}
+
 .cat-details {
   display: flex;
   column-gap: 1.5rem;
   align-items: center;
+  justify-content: space-between;
   padding-left: 0.5rem;
+}
+
+.spend-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  padding-right: 1rem;
 }
 
 .cat-link {

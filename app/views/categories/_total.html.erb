@@ -1,0 +1,5 @@
+<% @spendings.each do |spending| %>
+  <% if (spending.category_id == @category.id) then %>
+    <% @total = @total + spending.amount %>
+  <% end %>
+<% end %>
