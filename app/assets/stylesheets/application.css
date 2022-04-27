@@ -128,3 +128,29 @@ body {
   align-items: center;
   padding-left: 0.5rem;
 }
+
+.cat-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cat-div {
+  padding-top: 1rem;
+  text-align: center;
+  background-color: #5fb523;
+  padding-bottom: 1rem;
+}
+
+.actions-inner {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+.cat-new-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #5fb523;
+  padding: 1rem 2rem;
+  color: #fff;
+}
