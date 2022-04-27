@@ -8,7 +8,9 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @spendings = Spending.all
-    @spending = Spending.find(params[:id])
+    if(!@spendings.empty?) then
+      @spending = Spending.find(params[:id])
+    end
     @total = 0
   end
 

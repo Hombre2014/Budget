@@ -5,7 +5,9 @@ class SpendingsController < ApplicationController
   end
 
   def show
-    @spending = Spending.find(params[:id])
+    if(!@spendings.empty?) then
+      @spending = Spending.find(params[:id])
+    end
   end
 
   def new
