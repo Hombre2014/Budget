@@ -61,6 +61,7 @@ body {
 
 .arrow {
   cursor: pointer;
+  color: #fff;
 }
 
 .input-field {
@@ -88,6 +89,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .check-box {
@@ -101,4 +103,54 @@ body {
   text-align: center;
   cursor: pointer;
   color: #3778c2;
+}
+
+.categories-list {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  row-gap: 0.5rem;
+}
+
+.cat-card {
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.cat-details {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.cat-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cat-div {
+  padding-top: 1rem;
+  text-align: center;
+  background-color: #5fb523;
+  padding-bottom: 1rem;
+}
+
+.actions-inner {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+.cat-new-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #5fb523;
+  padding: 1rem 2rem;
+  color: #fff;
 }

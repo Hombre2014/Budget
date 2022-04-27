@@ -1,6 +1,6 @@
 <div class="container-full">
   <div class="header-block">
-    <%= link_to image_tag('arrow_left.png'), root_path, { 'class': 'arrow'} %>
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
     <span class="main-title">LOG IN</span>
     <span class="right-text">Next</span>
   </div>
@@ -8,11 +8,11 @@
   <div class="signup-body">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: 'input-field' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", required: true, class: 'input-field' %>
       </div>
 
       <div class="field">
-        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: 'input-field' %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", required: true, class: 'input-field' %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -21,13 +21,13 @@
           <%= f.label :remember_me %>
         </div>
       <% end %>
+  
+      <div class="actions">
+        <%= f.submit "LOG IN", class: 'btn-submit' %>
+      </div>
+    <% end %>
   </div>
 
-    <div class="actions">
-      <%= f.submit "LOG IN", class: 'btn-submit' %>
-    </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
-
+  <%= render "devise/shared/links" %>
+  <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
 </div>

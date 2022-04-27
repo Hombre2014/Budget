@@ -1,4 +1,31 @@
-<h1>Categories</h1>
-<a class="sign-in-btn" href="/users/sign_in">LOG IN</a>
-<a class="sign-up-btn" href="/users/sign_up">SIGN UP</a>
-<%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
+<div class="container-full">
+  <div class="header-block">
+    <i class="fa-solid fa-bars"></i>
+    <span>Categories</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+</div>
+
+<div class="categories-list">
+  <ul class="list-group">
+    <% @categories.each do |category| %>
+    <li class="cat-card">
+      <div class="cat-details">
+        <div>
+          <p class="cat-icon"><%= image_tag category.icon %></p>
+        </div>
+        <div>
+          <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "cat-link" do %>
+          <h5 class="cat-name"><%= category.name%></h5>
+          <% end %>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<div class="cat-div">
+  <div class="actions-inner">
+    <%= link_to 'ADD NEW CATEGORY', new_user_category_path, class: 'cat-new-btn' %>
+  </div>
+</div>
