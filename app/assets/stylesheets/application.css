@@ -336,8 +336,10 @@ body {
 }
 
 @media only screen and (min-width: 1280px) {
-  .container-small {
-    width: 80%;
+  .container-small,
+  .sign-up-body,
+  .new_user {
+    width: 70%;
     margin: 0 auto;
   }
 
@@ -346,6 +348,11 @@ body {
   .categories-list,
   .welcome {
     width: 70%;
+    margin: 0 auto;
+  }
+
+  .links {
+    width: 500px;
     margin: 0 auto;
   }
 
