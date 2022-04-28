@@ -46,6 +46,13 @@ Run the following commands:</br>
 `rails s`</br>
 Open a browser and go to: `https://localhost:3000` to view the app.
 
+## Database setup
+
+To start with clean database use:
+
+`cd Budget`</br>
+`rails db:drop db:create db:migrate`
+
 ## Testing
 
 `cd Budget`</br>

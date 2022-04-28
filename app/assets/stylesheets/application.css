@@ -268,3 +268,88 @@ body {
   padding: 1rem 2rem;
   color: #fff;
 }
+
+@media only screen and (min-width: 600px) {
+  h5,
+  input,
+  select,
+  .note,
+  .amount,
+  .name-amount,
+  .cat-name-total,
+  .logout,
+  .btn-cat-new,
+  label {
+    font-size: 1.25rem;
+  }
+
+  .title,
+  .main-title,
+  .cat-new-btn,
+  .btn-login,
+  .sign-up,
+  .shared-links,
+  .great {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h5,
+  input,
+  select,
+  .note,
+  .amount,
+  .name-amount,
+  .cat-name-total,
+  .logout,
+  .btn-cat-new,
+  label {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 1.25rem;
+  }
+
+  .title,
+  .main-title,
+  .cat-new-btn,
+  .btn-login,
+  .sign-up,
+  .shared-links,
+  .great {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-small {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .cat-div {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container-small {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .cat-div,
+  .cat-total,
+  .categories-list,
+  .welcome {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .btn-cat-new {
+    margin-top: 2rem;
+  }
+}
