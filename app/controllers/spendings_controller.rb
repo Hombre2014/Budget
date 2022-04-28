@@ -21,7 +21,7 @@ class SpendingsController < ApplicationController
 
     respond_to do |format|
       if @spending.save
-        format.html { redirect_to user_categories_path, notice: "The spending was successfully recorded." }
+        format.html { redirect_to user_categories_path, notice: 'The spending was successfully recorded.' }
         # format.json { render :show, status: :created, location: @spending }
       else
         format.html { render :new, status: :unprocessable_entity }

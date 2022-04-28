@@ -152,21 +152,10 @@ body {
 .note {
   display: block;
   background-color: #fff;
-  color: #999999;
+  color: #999;
   font-size: 1rem;
   padding-right: 1rem;
 }
-/* 
-.photo {
-  display: flex;
-  background-color: #fff;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
-}
-
-.person {
-  padding-left: 1rem;
-} */
 
 .check-box {
   margin: 1rem;
@@ -216,7 +205,6 @@ body {
 .spend-card {
   list-style-type: none;
   background-color: #fff;
-
 }
 
 .cat-total {
@@ -259,6 +247,7 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
 .cat-div {
   padding-top: 1rem;
   text-align: center;
