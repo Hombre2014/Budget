@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Spendings', type: :model do
   describe 'Spending model' do
     user = User.create(name: 'Yuriy', email: 'yuriy@example.com', password: '123456')
-    category = Category.new(user_id: @user, name: 'Food', icon: 'Food.png')
+    Category.new(user_id: @user, name: 'Food', icon: 'Food.png')
     subject { Spending.new(user_id: user, name: 'Dinning out', amount: 60, category_id: 1) }
     before { subject.save }
 
@@ -12,7 +12,7 @@ RSpec.describe 'Spendings', type: :model do
       expect(subject).to_not be_valid
     end
 
-    it 'should check that the user id is not blank' do
+    it 'should check that the user_id is not blank' do
       subject.user_id = nil
       expect(subject).to_not be_valid
     end

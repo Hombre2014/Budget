@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Testing Categories view', type: :feature do
   describe 'Category#index' do
     before(:each) do
-      user = User.create! name: 'Tester', email: 'tester@example.com', password: 'password'
+      User.create! name: 'Tester', email: 'tester@example.com', password: 'password'
       visit new_user_session_path
       fill_in 'Email', with: 'tester@example.com'
       fill_in 'Password', with: 'password'

@@ -268,3 +268,28 @@ body {
   padding: 1rem 2rem;
   color: #fff;
 }
+
+@media only screen and (min-width: 600px) {
+  h5,
+  input,
+  select,
+  .note,
+  .amount,
+  .name-amount,
+  .cat-name-total,
+  .logout,
+  .btn-cat-new,
+  label {
+    font-size: 1.25rem;
+  }
+
+  .title,
+  .main-title,
+  .cat-new-btn,
+  .btn-login,
+  .sign-up,
+  .shared-links,
+  .great {
+    font-size: 1.5rem;
+  }
+}
