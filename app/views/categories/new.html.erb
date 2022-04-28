@@ -5,7 +5,7 @@
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
 
-  <div>
+  <div class="categories-list">
     <%= form_with model: @category, url: "/users/#{current_user.id}/categories", method: :post do |form| %>
       <%= form.hidden_field :user_id, value: current_user.id %>
       <div class="field select">
