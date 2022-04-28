@@ -359,4 +359,8 @@ body {
   .btn-cat-new {
     margin-top: 2rem;
   }
+
+  .btn-login {
+    padding: 0.8rem 1.6rem;
+  }
 }
