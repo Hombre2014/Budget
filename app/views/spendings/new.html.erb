@@ -1,0 +1,25 @@
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span class="main-title">Add new spending</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <div>
+    <%= form_with model: @spending, url: "/users/#{current_user.id}/categories/#{params[:category_id]}/spendings", method: :post do |form| %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="field">
+        <%= form.text_field :name, placeholder: 'Spending name', required: true, class: 'input-field' %>
+      </div>
+      <div class="field">
+        <%= form.number_field :amount, placeholder: 'Spending amount', required: true, class: 'input-field' %>
+      </div>
+      <div class="field select">
+        <%= form.select :category_id, @categories.map { |category| [category.name, category.id] }, required: true %>
+        <span class="note">Select a category</span>
+      </div>
+      <div class="text-center">
+        <%= form.submit class:"btn-submit btn-cat-new" %>
+      </div>
+    <% end %>
+  </div>
+</div>

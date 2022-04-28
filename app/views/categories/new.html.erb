@@ -1,28 +1,28 @@
-<div class="container-categories">
-  <h2>Add new category</h2>
-  <div class="">
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span class="main-title">Add new category</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div>
     <%= form_with model: @category, url: "/users/#{current_user.id}/categories", method: :post do |form| %>
-      <div class="card">
-        <div class="card-body">
-          <%= form.hidden_field :user_id, value: current_user.id %>
-          <div class="cat-field">
-            <%= form.label :name, { class: "form-label" } %><br>
-            <%= form.text_field :name, placeholder: 'Category name', required: true %>
-          </div>
-          <div class="cat-field">
-            <%= form.label :icon, { class: "form-label" } %><br>
-            <%= form.select :icon, [['Housing', 'Housing.png'], ['Transportation', 'Transportation.png'], ['Food', 'Food.png'],
-                                    ['Utilities', 'Utilities.png'], ['Clothing', 'Clothing.png'], ['Medical', 'Medical.png'],
-                                    ['Insurance', 'Insurance.png'], ['Supplies', 'Supplies.png'], ['Personal', 'Personal.png'],
-                                    ['Education', 'Education.png'], ['Entertainment', 'Entertainment.png'], ['Business', 'Business.png'],
-                                    ['Repairs', 'Repairs.png']
-                                    ], required: true %>
-          </div>
-          <div class="text-center">
-            <%= form.submit class:"btn btn-success create" %>
-          </div>
-        <% end %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="field">
+        <%= form.text_field :name, placeholder: 'Category name', required: true, class: 'input-field' %>
       </div>
-    </div>
+      <div class="field select">
+        <%= form.select :icon, [['Housing', 'Housing.png'], ['Transportation', 'Transportation.png'], ['Food', 'Food.png'],
+                                ['Utilities', 'Utilities.png'], ['Clothing', 'Clothing.png'], ['Medical', 'Medical.png'],
+                                ['Insurance', 'Insurance.png'], ['Supplies', 'Supplies.png'], ['Personal', 'Personal.png'],
+                                ['Education', 'Education.png'], ['Entertainment', 'Entertainment.png'], ['Business', 'Business.png'],
+                                ['Repairs', 'Repairs.png']
+                                ], required: true %>
+        <span class="note">Select an icon</span>
+      </div>
+      <div class="text-center">
+        <%= form.submit class: 'btn-submit btn-cat-new' %>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,10 +1,15 @@
 class CategoriesController < ApplicationController
   def index
     @categories = current_user.categories
+    @spendings = Spending.all
+    @total = 0
   end
 
   def show
     @category = Category.find(params[:id])
+    @spendings = Spending.all
+    @spending = Spending.new
+    @total = 0
   end
 
   def new
@@ -39,24 +44,6 @@ class CategoriesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  # def new
-  #   @categories = current_user.categories.includes(:spendings)
-  # end
-
-  # def create
-  #   @category = current_user.categories.new(category_params)
-
-  #   respond_to do |format|
-  #     if @category.save
-  #       format.html { redirect_to category_path(@category), notice: 'Category was successfully created.' }
-  #       # format.json { render :show, status: :created, location: @category }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       # format.json { render json: @category.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
 
   private
 

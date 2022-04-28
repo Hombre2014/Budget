@@ -5,19 +5,33 @@
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
 </div>
-
+<div class='welcome'>
+  <span class='great'>Welcome, <%= current_user.name %></span>
+  <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'logout' %>
+</div>
 <div class="categories-list">
   <ul class="list-group">
     <% @categories.each do |category| %>
     <li class="cat-card">
       <div class="cat-details">
-        <div>
-          <p class="cat-icon"><%= image_tag category.icon %></p>
+        <div class="left">
+          <div>
+            <p class="cat-icon"><%= image_tag category.icon %></p>
+          </div>
+          <div>
+            <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "cat-link" do %>
+              <h5 class="cat-name"><%= category.name%></h5>
+            <% end %>
+          </div>
         </div>
         <div>
-          <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "cat-link" do %>
-          <h5 class="cat-name"><%= category.name%></h5>
+          <% @spendings.each do |spending| %>
+          <% if (spending.category_id == category.id) then %>
+            <% @total = @total + spending.amount %>
+            <% end %>
           <% end %>
+          <span class="total amount">Total: $<%= @total %>0</span>
+          <% @total = 0 %>
         </div>
       </div>
     </li>

@@ -26,7 +26,6 @@
       <div class="field">
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", required: true, class: 'input-field' %>
       </div>
-    
 
       <div class="actions">
         <%= f.submit "SIGN UP", class: 'btn-submit' %>
@@ -35,5 +34,4 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
-  <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
 </div>

@@ -1,8 +1,17 @@
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url("Proxima Nova Font.otf");
+  src: url('proxima_nova_font-webfont.woff2') format('woff2');
+  src: url('proxima_nova_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #f1f3f2;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'proxima_novaregular', Arial, Helvetica, sans-serif;
 }
 
 .container-splash {
@@ -12,6 +21,31 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
+}
+
+.logout {
+  background-color: #434b54;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #2d3033;
+}
+
+.great {
+  font-weight: bold;
+}
+
+.welcome {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
 }
 
 .header {
@@ -72,6 +106,19 @@ body {
   padding-left: 1rem;
 }
 
+.select {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  background-color: #fff;
+}
+
+.input-select {
+  width: 100%;
+  padding-left: 1rem;
+}
+
 .field {
   border-bottom: 1px solid #ccc;
 }
@@ -90,6 +137,24 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.btn-cat-new {
+  padding: 0.6rem 1.2rem;
+}
+
+.note {
+  display: block;
+  background-color: #fff;
+  color: #999;
+  font-size: 1rem;
+  padding-right: 1rem;
 }
 
 .check-box {
@@ -122,11 +187,60 @@ body {
   background-color: #fff;
 }
 
+.name-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.date {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.spend-card {
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.cat-total {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-name-total {
+  font-weight: 600;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1rem;
+}
+
 .cat-details {
   display: flex;
   column-gap: 1.5rem;
   align-items: center;
+  justify-content: space-between;
   padding-left: 0.5rem;
+}
+
+.spend-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  padding-right: 1rem;
 }
 
 .cat-link {
