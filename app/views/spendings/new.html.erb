@@ -4,7 +4,6 @@
     <span class="main-title">Add new spending</span>
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
-
   <div>
     <%= form_with model: @spending, url: "/users/#{current_user.id}/categories/#{params[:category_id]}/spendings", method: :post do |form| %>
       <%= form.hidden_field :user_id, value: current_user.id %>
