@@ -5,7 +5,10 @@
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
 </div>
-
+<div class='welcome'>
+  <span class='great'>Welcome, <%= current_user.name %></span>
+  <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'logout' %>
+</div>
 <div class="categories-list">
   <ul class="list-group">
     <% @categories.each do |category| %>

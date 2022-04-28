@@ -1,28 +1,26 @@
-<h1>New spendings</h1>
-<div class="container-categories">
-  <h2>Add new spending</h2>
-  <div class="">
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span class="main-title">Add new spending</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div>
     <%= form_with model: @spending, url: "/users/#{current_user.id}/categories/#{params[:category_id]}/spendings", method: :post do |form| %>
-      <div class="card">
-        <div class="card-body">
-          <%= form.hidden_field :user_id, value: current_user.id %>
-          <div class="cat-field">
-            <%= form.label :name, { class: "form-label" } %><br>
-            <%= form.text_field :name, placeholder: 'Spending name', required: true %>
-          </div>
-          <div class="cat-field">
-            <%= form.label :amount, { class: "form-label" } %><br>
-            <%= form.number_field :amount, placeholder: 'Spending amount', required: true %>
-          </div>
-          <div class="cat-field">
-            <%= form.label :category_id, { class: "form-label" } %><br>
-            <%= form.select :category_id, @categories.map { |category| [category.name, category.id] }, required: true %>
-          </div>
-          <div class="text-center">
-            <%= form.submit class:"btn btn-success create" %>
-          </div>
-        <% end %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="field">
+        <%= form.text_field :name, placeholder: 'Spending name', required: true, class: 'input-field' %>
       </div>
-    </div>
+      <div class="field">
+        <%= form.number_field :amount, placeholder: 'Spending amount', required: true, class: 'input-field' %>
+      </div>
+      <div class="field select">
+        <%= form.select :category_id, @categories.map { |category| [category.name, category.id] }, required: true %>
+        <span class="note">Select a category</span>
+      </div>
+      <div class="text-center">
+        <%= form.submit class:"btn-submit btn-cat-new" %>
+      </div>
+    <% end %>
   </div>
 </div>

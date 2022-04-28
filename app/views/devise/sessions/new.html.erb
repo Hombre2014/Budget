@@ -5,7 +5,7 @@
     <span class="right-text">Next</span>
   </div>
   
-  <div class="signup-body">
+  <div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", required: true, class: 'input-field' %>
@@ -29,5 +29,4 @@
   </div>
 
   <%= render "devise/shared/links" %>
-  <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
 </div>
