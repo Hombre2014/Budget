@@ -44,6 +44,10 @@ Watch the [video](https://www.loom.com/share/413ed62336e248ee9cf4aba3901917c9)
 <img src="./app/assets/images/screen6.jpg" alt="screenshot 6" width="360"/>
 <img src="./app/assets/images/screen7.jpg" alt="screenshot 7" width="360"/>
 
+## Live demo
+
+THe site is deployed using Heroku [here](https://yuriy-budget-tracker.herokuapp.com/)
+
 ## Built With
 
 - Languages: Ruby
