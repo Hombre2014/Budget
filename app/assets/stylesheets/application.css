@@ -103,14 +103,13 @@ body {
   outline: none;
   border: none;
   height: 2.8rem;
-  padding-left: 1rem;
 }
 
 .select {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
-  padding-left: 1rem;
+  padding-left: 4px;
   background-color: #fff;
 }
 
@@ -121,6 +120,7 @@ body {
 
 .field {
   border-bottom: 1px solid #ccc;
+  width: 100%;
 }
 
 .actions {
@@ -171,6 +171,8 @@ body {
 }
 
 .categories-list {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: 0 auto;
 }
@@ -308,10 +310,6 @@ body {
     font-size: 1.5rem;
   }
 
-  .input-field {
-    padding: 0;
-  }
-
   .date {
     font-size: 1.25rem;
   }
@@ -366,9 +364,5 @@ body {
 
   .btn-login {
     padding: 0.8rem 1.6rem;
-  }
-
-  .input-field {
-    padding: 0;
   }
 }
