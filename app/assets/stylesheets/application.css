@@ -89,7 +89,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1rem;
   margin-bottom: 2rem;
 }
 
@@ -285,13 +285,18 @@ body {
     font-size: 1.25rem;
   }
 
+  .header-block {
+    padding: 1rem 2rem;
+  }
+
   .title,
   .main-title,
   .cat-new-btn,
   .btn-login,
   .sign-up,
   .shared-links,
-  .great {
+  .great,
+  .header-block {
     font-size: 1.5rem;
   }
 }
@@ -320,7 +325,8 @@ body {
   .btn-login,
   .sign-up,
   .shared-links,
-  .great {
+  .great,
+  .header-block {
     font-size: 1.75rem;
   }
 }
