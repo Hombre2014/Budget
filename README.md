@@ -37,8 +37,6 @@ Watch the [video](https://www.loom.com/share/413ed62336e248ee9cf4aba3901917c9)
 ## Screenshots
 
 <img src="./app/assets/images/screen1.jpg" alt="screenshot 1" width="360"/>
-<img src="./app/assets/images/screen2.jpg" alt="screenshot 2" width="360"/>
-<img src="./app/assets/images/screen3.jpg" alt="screenshot 3" width="360"/>
 <img src="./app/assets/images/screen4.jpg" alt="screenshot 4" width="360"/>
 <img src="./app/assets/images/screen5.jpg" alt="screenshot 5" width="360"/>
 <img src="./app/assets/images/screen6.jpg" alt="screenshot 6" width="360"/>
