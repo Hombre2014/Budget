@@ -1,0 +1,19 @@
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span class="main-title">Forgot your password?</span>
+    <span class="right-text">Next</span>
+  </div>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, class: 'input-field', placeholder: 'Email' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send me reset password instructions", class: 'btn-submit btn-cat-new' %>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

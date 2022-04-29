@@ -30,6 +30,18 @@ gem 'jbuilder'
 # Add rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Add rdoc
+gem 'rdoc', '~> 4.2', '>= 4.2.2'
+
+# Add rdoc-data
+gem 'rdoc-data', '~> 4.1'
+
+# Add devise for authentication
+gem 'devise'
+
+# Add CanCanCan
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -53,7 +65,9 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
@@ -65,4 +79,11 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end

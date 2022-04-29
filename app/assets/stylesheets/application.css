@@ -1,15 +1,375 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url("Proxima Nova Font.otf");
+  src: url('proxima_nova_font-webfont.woff2') format('woff2');
+  src: url('proxima_nova_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f3f2;
+  font-family: 'proxima_novaregular', Arial, Helvetica, sans-serif;
+}
+
+.container-splash {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.logout {
+  background-color: #434b54;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #2d3033;
+}
+
+.great {
+  font-weight: bold;
+}
+
+.welcome {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.splash {
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-login {
+  background-color: #3778c2;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  width: 90%;
+  text-align: center;
+}
+
+.sign-up {
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  width: 90%;
+  text-align: center;
+  color: #afb0b4;
+}
+
+.header-block {
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 1rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.arrow {
+  cursor: pointer;
+  color: #fff;
+}
+
+.input-field {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 2.8rem;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+  padding: 1rem 0;
+  padding-left: 4px;
+  background-color: #fff;
+}
+
+.input-select {
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.field {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.actions {
+  text-decoration: none;
+  color: #fff;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.btn-submit {
+  padding: 0.4rem 1.2rem;
+  background-color: #5fb523;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.btn-cat-new {
+  padding: 0.6rem 1.2rem;
+}
+
+.note {
+  display: block;
+  background-color: #fff;
+  color: #999;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+.check-box {
+  margin: 1rem;
+  border: none;
+}
+
+.shared-links {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: #3778c2;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  row-gap: 0.5rem;
+}
+
+.cat-card {
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.name-amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.date {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.spend-card {
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.cat-total {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-name-total {
+  font-weight: 600;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.cat-details {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+}
+
+.spend-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  padding-right: 1rem;
+}
+
+.cat-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cat-div {
+  padding-top: 1rem;
+  text-align: center;
+  background-color: #5fb523;
+  padding-bottom: 1rem;
+}
+
+.actions-inner {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+.cat-new-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #5fb523;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+@media only screen and (min-width: 600px) {
+  h5,
+  input,
+  select,
+  .note,
+  .amount,
+  .name-amount,
+  .cat-name-total,
+  .logout,
+  .btn-cat-new,
+  label {
+    font-size: 1.25rem;
+  }
+
+  .header-block {
+    padding: 1rem 2rem;
+  }
+
+  .title,
+  .main-title,
+  .cat-new-btn,
+  .btn-login,
+  .sign-up,
+  .shared-links,
+  .great,
+  .header-block {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h5,
+  input,
+  select,
+  .note,
+  .amount,
+  .name-amount,
+  .cat-name-total,
+  .logout,
+  .btn-cat-new,
+  label {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 1.25rem;
+  }
+
+  .title,
+  .main-title,
+  .cat-new-btn,
+  .btn-login,
+  .sign-up,
+  .shared-links,
+  .great,
+  .header-block {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-small {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .cat-div {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container-small,
+  .sign-up-body,
+  .new_user {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .cat-div,
+  .cat-total,
+  .categories-list,
+  .welcome {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .links {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .btn-cat-new {
+    margin-top: 2rem;
+  }
+
+  .btn-login {
+    padding: 0.8rem 1.6rem;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="container-splash">
+  <h1 class="header">Budget Tracker</h1>
+  <div class="splash">
+    <%= image_tag "splash.gif", { class: 'logo' } %>
+  </div>
+  <% if current_user.nil? %>
+    <div class="links">
+      <%= link_to 'LOG IN', new_user_session_path, { class: 'btn-login'} %>
+      <%= link_to 'SIGN UP', new_user_registration_path, { class: 'sign-up'} %>
+    </div>
+  <% else %>
+    <%= button_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'sign-in-btn' %>
+  <% end %>
+</div>

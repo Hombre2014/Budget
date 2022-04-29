@@ -1,0 +1,28 @@
+<div class="container-full">
+  <div class="header-block">
+    <%= link_to ('<i class="fa-solid fa-arrow-left"></i>').html_safe, root_path, { 'class': 'arrow'} %>
+    <span class="main-title">Add new category</span>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <div class="categories-list">
+    <%= form_with model: @category, url: "/users/#{current_user.id}/categories", method: :post do |form| %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <div class="field select">
+        <%= form.select :icon, [["Category's icon", ''],
+                                ['Housing', 'Housing.png'], ['Transportation', 'Transportation.png'], ['Food', 'Food.png'],
+                                ['Utilities', 'Utilities.png'], ['Clothing', 'Clothing.png'], ['Medical', 'Medical.png'],
+                                ['Insurance', 'Insurance.png'], ['Supplies', 'Supplies.png'], ['Personal', 'Personal.png'],
+                                ['Education', 'Education.png'], ['Entertainment', 'Entertainment.png'], ['Business', 'Business.png'],
+                                ['Repairs', 'Repairs.png'], ['Sport', 'Sport.png']
+                                ], required: true %>
+        <span class="note">Select an icon</span>
+      </div>
+      <div class="field">
+        <%= form.text_field :name, placeholder: ' Category name', required: true, class: 'input-field' %>
+      </div>
+      <div class="text-center">
+        <%= form.submit class: 'btn-submit btn-cat-new' %>
+      </div>
+    <% end %>
+  </div>
+</div>
