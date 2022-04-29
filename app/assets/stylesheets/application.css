@@ -108,6 +108,7 @@ body {
 .select {
   display: flex;
   justify-content: space-between;
+  column-gap: 0.5rem;
   padding: 1rem 0;
   padding-left: 4px;
   background-color: #fff;
