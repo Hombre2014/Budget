@@ -44,7 +44,7 @@ Watch the [video](https://www.loom.com/share/413ed62336e248ee9cf4aba3901917c9)
 
 ## Live demo
 
-THe site is deployed using Heroku [here](https://yuriy-budget-tracker.herokuapp.com/)
+THe site is deployed using Koeyb [here](https://budget-hombre2014.koyeb.app/)
 
 ## Built With
 
