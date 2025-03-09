@@ -24,6 +24,10 @@ default: &default
 development:
   <<: *default
   database: Budget_development
+  username: <%= Rails.application.credentials.username %>
+  password: <%= Rails.application.credentials.password %>
+  host: localhost
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +62,10 @@ development:
 test:
   <<: *default
   database: Budget_test
+  username: <%= Rails.application.credentials.username %>
+  password: <%= Rails.application.credentials.password %>
+  host: localhost
+  port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,7 +88,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: Budget_production
-  username: Budget
-  password: <%= ENV["BUDGET_DATABASE_PASSWORD"] %>
+  url: <%= Rails.application.credentials.neon_database_url %>
