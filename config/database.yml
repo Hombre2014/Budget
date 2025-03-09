@@ -87,6 +87,9 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
-  adapter: postgresql
+  <<: *default
   url: <%= Rails.application.credentials.neon_database_url %>
+  pool: 5
+  sslmode: require
