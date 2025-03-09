@@ -90,6 +90,6 @@ test:
 
 production:
   <<: *default
-  url: <%= Rails.application.credentials.neon_database_url %>
+  url: <%= ENV['DATABASE_URL'] %>
   pool: 5
   sslmode: require
